@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bends", "Bends\Bends.csproj", "{8AF7C22A-C780-4085-9660-64A59B8E1621}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes", "Classes\Classes.csproj", "{B20F9C15-8296-4C4C-8D5E-E3B671BDD259}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AF7C22A-C780-4085-9660-64A59B8E1621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AF7C22A-C780-4085-9660-64A59B8E1621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AF7C22A-C780-4085-9660-64A59B8E1621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AF7C22A-C780-4085-9660-64A59B8E1621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B20F9C15-8296-4C4C-8D5E-E3B671BDD259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B20F9C15-8296-4C4C-8D5E-E3B671BDD259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B20F9C15-8296-4C4C-8D5E-E3B671BDD259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B20F9C15-8296-4C4C-8D5E-E3B671BDD259}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {31CECB7D-1A9D-4EEA-AAAF-59E300B4C9B4}
+	EndGlobalSection
+EndGlobal

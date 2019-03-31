@@ -1,0 +1,18 @@
+﻿<Window x:Class="TextEditor.FindWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextEditor"
+        mc:Ignorable="d"
+        Title="FindWindow" Height="300" Width="300">
+    <Grid Background="DarkCyan">
+        <TextBox x:Name="FindRecT" HorizontalAlignment="Left" Height="23" Margin="10,38,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ReplaceRecT" HorizontalAlignment="Left" Height="23" Margin="10,98,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label Content="Find rec" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Replace rec" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="CloseFW" Content="Close" HorizontalAlignment="Left" Margin="10,239,0,0" VerticalAlignment="Top" Width="75" Click="CloseFW_Click"/>
+        <Button x:Name="ExecuteFW" Content="Execute" HorizontalAlignment="Left" Margin="10,214,0,0" VerticalAlignment="Top" Width="75" Click="ExecuteFW_Click"/>
+
+    </Grid>
+</Window>

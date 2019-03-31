@@ -1,0 +1,97 @@
+﻿<Window x:Class="TextEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextEditor"
+        mc:Ignorable="d"
+        Title="MainWindow" SizeToContent="WidthAndHeight"
+    MouseLeftButtonDown="Window_MouseLeftButtonDown"
+      WindowStyle="None"
+      AllowsTransparency="True"
+      Background="Transparent">
+    <Window.Resources>
+        <RoutedUICommand x:Key="Command" Text=""/>
+    </Window.Resources>
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource Command}"  Executed="Date_Time"/>
+
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Key="F5" Command="{StaticResource Command}"/>
+    </Window.InputBindings>
+
+
+    <Canvas Height="350" Width="550">
+        <Path Stroke="Gray" StrokeThickness="2" Name="UIPath" Canvas.Left="3" >
+            <Path.Fill>
+                <SolidColorBrush Color="DarkCyan"/>
+            </Path.Fill>
+
+            <Path.Data>
+                <PathGeometry >
+                    <PathFigure StartPoint="100,1">
+                        <ArcSegment Size="11,10" RotationAngle="180" IsLargeArc="True" SweepDirection="Counterclockwise" Point="100,175"/>
+                        <ArcSegment Size="11,10" RotationAngle="180" IsLargeArc="True" SweepDirection="Counterclockwise" Point="100,349"/>
+                        <LineSegment Point="450,349"/>
+                        <ArcSegment Size="11,10" RotationAngle="180" IsLargeArc="True" SweepDirection="Counterclockwise" Point="450,175"/>
+                        <ArcSegment Size="11,10" RotationAngle="180" IsLargeArc="True" SweepDirection="Counterclockwise" Point="450,1"/>
+                        <LineSegment Point="100,1"/>
+                    </PathFigure>
+                </PathGeometry>
+
+            </Path.Data>
+        </Path>
+        <DockPanel Canvas.Left="56" Canvas.Top="10" Height="303" Width="440" RenderTransformOrigin="0.5,0.51" LastChildFill="False">
+            <!-- <WrapPanel HorizontalAlignment="Stretch" DockPanel.Dock="Top" Margin="0,0,0,10">
+
+                <Button Content="Button" Width="75" Click="Button_Click"/>
+                <Button Content="Button" Width="75" Click="Button_Click_1"/>
+
+            </WrapPanel>-->
+            <ToolBar DockPanel.Dock="Top">
+                <Button x:Name="NewButton" Content="New" Height="22" VerticalAlignment="Top" Width="30" Click="NewButton_Click"/>
+                <Separator/>
+                <Button x:Name="OpenButton" Content="Open" Height="22" VerticalAlignment="Top" Width="34" Click="OpenButton_Click"/>
+                <Separator/>
+                <Button x:Name="SaveButton" Content="Save" Height="22" VerticalAlignment="Top" Width="30" Click="SaveButton_Click"/>
+                <Separator />
+                <ComboBox Name="cmbFontFamily" Width="100" SelectionChanged="cmbFontFamily_SelectionChanged" />
+                <Separator/>
+                <ToggleButton Command="EditingCommands.ToggleBold" Name="btnBold" Content="B" Foreground="Black" FontWeight="Bold"/>
+                <Separator/>
+                <ToggleButton Command="EditingCommands.ToggleUnderline" Name="btnUnderline">
+                    <TextBlock  TextDecorations="Underline">U</TextBlock>
+                </ToggleButton>
+                <Separator/>
+                <ToggleButton Command="EditingCommands.ToggleItalic" Name="btnItalic" Content="I" FontStyle="Italic"/>
+                <Separator/>
+                <ComboBox Name="cmbFont" Height="22" Margin="0"  Width="30" SelectionChanged="cmbFont_SelectionChanged"/>
+                <Separator/>
+                <ComboBox x:Name="cmbColor" Canvas.Left="371" Canvas.Top="42" Width="15" SelectionChanged="cmbColor_SelectionChanged"/>
+                <Separator/>
+
+
+
+            </ToolBar>
+            <RichTextBox Name="rtbEditor" SelectionChanged="rtbEditor_SelectionChanged" Margin="0,11,0,23" Width="438" TextChanged="rtbEditor_TextChanged"/>
+            <StatusBar DockPanel.Dock="Bottom" Height="23" Margin="-437,0,2,0" RenderTransformOrigin="0.5,0.5">
+                <StatusBar.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StatusBar.RenderTransform>
+            </StatusBar>
+        </DockPanel>
+        <Button x:Name="CloseButton" Content="Close" Height="22" Canvas.Left="179" Canvas.Top="318" Width="188" Background="White" BorderBrush="Black" Click="CloseButton_Click"/>
+        <Button x:Name="DT"   Content="DateTime" Canvas.Left="390" Canvas.Top="12" Width="58" Command="{StaticResource Command}" Height="22"/>
+        <Label x:Name="DTL" HorizontalContentAlignment="Right" VerticalContentAlignment="Top" Content="" Canvas.Left="308" Canvas.Top="287" Width="186"/>
+        <Label x:Name="WCounter" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Content="" Width="242" Height="26" FontSize="12" Canvas.Left="56" Canvas.Top="287" />
+        <Button x:Name="FR" Content="FindRep" Canvas.Left="447" Canvas.Top="12" Width="47" Click="FR_Click" Height="22"/>
+
+
+    </Canvas>
+</Window>
